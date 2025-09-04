@@ -63,22 +63,21 @@ html {
 }
 
 .header a:hover {
-    padding: 40px;
+    padding: 10px;
     border-radius: 50px;
     background-color: #461C1C;
     color: var(--color-white);
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .menu {
     margin: auto;
-    margin-bottom: 20px;
     width: 90%;
-    height: 100vh;
+    height: calc(100vh + 15vh);
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 3rem;
 }
 
 

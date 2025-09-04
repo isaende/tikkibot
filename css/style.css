@@ -4,6 +4,8 @@
     --color-darkred: #4e2121;
     --color-lightred: #540D0D;
     --color-white: white;
+    --font-sans: "Julius Sans One", sans-serif;
+    --font-racing: "Racing Sans One", sans-serif;
 }
 
 * {
@@ -58,27 +60,26 @@ html {
 .header a {
     text-decoration: none;
     color: black;
-    font-family: "Julius Sans One", sans-serif;
+    font-family: var(--font-sans);
     transition: .7s;
 }
 
 .header a:hover {
-    padding: 40px;
+    padding: 10px;
     border-radius: 50px;
     background-color: #461C1C;
     color: var(--color-white);
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .menu {
     margin: auto;
-    margin-bottom: 20px;
     width: 90%;
-    height: 100vh;
+    height: calc(100vh + 15vh);
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 3rem;
 }
 
 
@@ -92,11 +93,11 @@ html {
     justify-content: center;
     align-items: center;
     border-radius: 60px;
-    font-family: "Julius Sans One", sans-serif;
     gap: 20px;
 }
 
 .hero h2 {
+    font-family: var(--font-racing);
     width: 100%;
     font-size: clamp(9vmax, 9rem, 4vmin);
     text-align: center;
@@ -109,9 +110,11 @@ html {
     width: 50%;
     font-size: clamp(1.2vmax, 1.2rem, 1vmin);
     font-weight: 600;
+    font-family: var(--font-sans);
 }
 
 .button-menu {
+    font-family: var(--font-sans);
     padding: 20px 2rem;
     margin: 20px;
     background-color: var(--color-lightred);
@@ -142,6 +145,81 @@ html {
 
 
 /* FIM MENU */
+
+/* COMEÇO APRESENTACAO */
+.container-apresentacao{
+display: flex;
+flex-direction: row;
+
+}
+
+.content-apresentacao{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.content-apresentacao h2{
+    font-size: 80px;
+    font-family: var(--font-racing);
+}
+
+
+.content-apresentacao p{
+    width: 50%;
+    font-size: clamp(1.2rem, 1.2rem, 4rem);
+    font-weight: 700;
+    font-family: var(--font-sans);
+}
+.button{
+    padding: 20px 2rem;
+    width: 15%;
+    background-color: var(--color-lightred);
+    border: 2px solid #540D0D;
+    border-radius: 50px;
+    font-family: var(--font-sans);
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--color-white);
+    font-weight: 700;
+    transition: .7s;
+}
+
+.button:hover{
+    background-color: transparent;
+    border-color: var(--color-darkred);
+    color: var(--color-darkred);
+}
+
+
+.aside-apresentacao{
+    width: 50%;
+    height: calc(100vh + 15vh);
+    display: grid;
+    grid-template-columns: repeat(2, minmax(auto, 1fr));
+    grid-template-rows: repeat(3, minmax(auto, 1fr));
+    gap: 20px;
+    
+}
+
+.box1-apresentacao{
+    padding: 5px;
+    background-color: #461C1C;
+    border-radius: 30px;
+}
+.box2-apresentacao{
+    padding: 5px;
+    background-color: #461C1C;
+    border-radius: 30px;
+}
+.box3-apresentacao{
+    padding: 5px;
+    background-color: #461C1C;
+    border-radius: 30px;
+}
+
+/* FIM APRESENTACAO */
 
 
 .container-arma {

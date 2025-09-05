@@ -116,7 +116,7 @@ html {
 
 .button-menu {
     font-family: var(--font-sans);
-    padding: 20px 2rem;
+    padding: 1.25rem 2rem;
     margin: 20px;
     background-color: var(--color-lightred);
     border: 2px solid #540D0D;
@@ -135,7 +135,6 @@ html {
 }
 
 
-
 .aside-menu {
     width: 30%;
     height: 70vh;
@@ -148,9 +147,10 @@ html {
 /* FIM MENU */
 
 /* COMEÇO APRESENTACAO */
-.container-apresentacao {
-    display: flex;
-    flex-direction: row;
+.container-apresentacao{
+width: 100%;
+display: flex;
+flex-direction: row;
 
 }
 
@@ -158,7 +158,10 @@ html {
     width: 50%;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     margin: auto;
+    flex-wrap: wrap;
 }
 
 .content-apresentacao h2 {
@@ -173,15 +176,17 @@ html {
     font-weight: 700;
     font-family: var(--font-sans);
 }
-
-.button {
-    padding: 20px 2rem;
+.button{
+    padding: 1.25rem 2rem;
     width: 15%;
     background-color: var(--color-lightred);
     border: 2px solid #540D0D;
     border-radius: 50px;
     font-family: var(--font-sans);
     text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-transform: uppercase;
     color: var(--color-white);
     font-weight: 700;
@@ -195,9 +200,9 @@ html {
 }
 
 
-.aside-apresentacao {
-    width: 50%;
+.aside-apresentacao{
     height: calc(100vh + 15vh);
+    width: 50%;            
     display: grid;
     grid-template-columns: repeat(2, minmax(auto, 1fr));
     grid-template-rows: repeat(3, minmax(auto, 1fr));
@@ -209,6 +214,7 @@ html {
     padding: 5px;
     background-color: #461C1C;
     border-radius: 30px;
+    grid-column: span 2;
 }
 
 .box2-apresentacao {

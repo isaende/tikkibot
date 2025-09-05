@@ -6,6 +6,7 @@
     --color-white: white;
     --font-sans: "Julius Sans One", sans-serif;
     --font-racing: "Racing Sans One", sans-serif;
+    --font-josefin: "Josefin Sans", sans-serif;
 }
 
 * {
@@ -147,32 +148,33 @@ html {
 /* FIM MENU */
 
 /* COMEÇO APRESENTACAO */
-.container-apresentacao{
-display: flex;
-flex-direction: row;
+.container-apresentacao {
+    display: flex;
+    flex-direction: row;
 
 }
 
-.content-apresentacao{
+.content-apresentacao {
     width: 50%;
     display: flex;
     flex-direction: column;
     margin: auto;
 }
 
-.content-apresentacao h2{
+.content-apresentacao h2 {
     font-size: 80px;
     font-family: var(--font-racing);
 }
 
 
-.content-apresentacao p{
+.content-apresentacao p {
     width: 50%;
     font-size: clamp(1.2rem, 1.2rem, 4rem);
     font-weight: 700;
     font-family: var(--font-sans);
 }
-.button{
+
+.button {
     padding: 20px 2rem;
     width: 15%;
     background-color: var(--color-lightred);
@@ -186,34 +188,36 @@ flex-direction: row;
     transition: .7s;
 }
 
-.button:hover{
+.button:hover {
     background-color: transparent;
     border-color: var(--color-darkred);
     color: var(--color-darkred);
 }
 
 
-.aside-apresentacao{
+.aside-apresentacao {
     width: 50%;
     height: calc(100vh + 15vh);
     display: grid;
     grid-template-columns: repeat(2, minmax(auto, 1fr));
     grid-template-rows: repeat(3, minmax(auto, 1fr));
     gap: 20px;
-    
+
 }
 
-.box1-apresentacao{
+.box1-apresentacao {
     padding: 5px;
     background-color: #461C1C;
     border-radius: 30px;
 }
-.box2-apresentacao{
+
+.box2-apresentacao {
     padding: 5px;
     background-color: #461C1C;
     border-radius: 30px;
 }
-.box3-apresentacao{
+
+.box3-apresentacao {
     padding: 5px;
     background-color: #461C1C;
     border-radius: 30px;
@@ -327,7 +331,7 @@ flex-direction: row;
 /* ----------------------- GALERIA ----------------------*/
 .container-galeria {
     width: 100%;
-    height: calc(100vh - 70px);
+    height: calc(100vh - 1px);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -397,89 +401,86 @@ flex-direction: row;
 }
 
 .card-hardware {
-    border: 1px solid var(--color-darkred);
-    padding: 1.5rem;
-    text-align: center;
+    background: #fff;
     border-radius: 20px;
-    height: auto;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 22rem;
 }
 
-.fotos-hard {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
-}
-
-.fotos-hard img {
+.card-img {
     width: 100%;
-    max-width: 280px;
-    height: auto;
+    height: 300px;
     object-fit: cover;
-    border-radius: 15px;
 }
 
-.card-hardware h3 {
-    margin: 1rem 0 0.5rem;
+.card-content {
+    padding: 1rem;
+    text-align: start;
+}
+
+.card-content h3 {
+    margin: 0.5rem 0;
     font-size: 1.2rem;
+    color: var(--color-darkred);
 }
 
-.card-hardware p {
+.card-content p {
     font-size: 0.9rem;
-    text-align: center;
+    color: var(--color-darkred);
+    font-family: var(--font-josefin);
+    font-weight: 400;
 }
-
 
 /* ----------- MEDIAS ----------- */
+/* TABLET */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container-hardware {
+        margin: 2rem auto;
+        gap: 1.5rem;
+    }
+
+    .card-hardware {
+        max-width: 25rem;
+    }
+
+    .card-img {
+        height: 350px;
+    }
+
+    .card-content h3 {
+        font-size: 1.4rem;
+    }
+
+    .card-content p {
+        font-size: 1.1rem;
+    }
+}
+
 /* CELULAR */
 @media (max-width: 768px) {
     .container-hardware {
         grid-template-columns: 1fr;
         margin: 1rem auto;
-        padding: 0 3rem;
-        height: auto;
-    }
-
-    .fotos-hard {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .fotos-hard img {
-        height: auto;
-        width: 100%;
-        max-width: 400px;
-    }
-
-    .card-hardware h3 {
-        font-size: 1.5rem;
-    }
-
-    .card-hardware p {
-        font-size: 1.2rem;
-    }
-}
-
-/* TABLET */
-@media (min-width: 769px) and (max-width: 1024px) {
-    .container-hardware {
-        grid-template-columns: 1fr;
-        max-width: 700px;
-        margin: 2rem auto;
         padding: 0 1rem;
     }
 
-    .fotos-hard {
-        flex-wrap: wrap;
+    .card-hardware {
+        max-width: 28rem;
     }
 
-    .fotos-hard img {
-        width: 13rem;
-        height: 13rem;
+    .card-img {
+        height: 380px;
     }
 
-    .card-hardware p {
-        font-size: 0.95rem;
+    .card-content h3 {
+        font-size: 1.5rem;
+        text-align: center;
     }
+
+    .card-content p {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
 }

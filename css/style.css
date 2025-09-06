@@ -30,8 +30,16 @@ html {
 
 
 .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15vh;
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
+}
+
+.container-menu{
+    width: 100%;
 }
 
 
@@ -39,7 +47,6 @@ html {
 .header {
     width: 100%;
     height: 15vh;
-    grid-column: 1/3;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -76,7 +83,6 @@ html {
 .menu {
     margin: auto;
     width: 90%;
-    height: calc(100vh + 15vh);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -100,7 +106,7 @@ html {
 .hero h2 {
     font-family: var(--font-racing);
     width: 100%;
-    font-size: clamp(9vmax, 9rem, 4vmin);
+    font-size: clamp(9vmax, 9rem, 3vmin);
     text-align: center;
     font-family: "Racing Sans One", sans-serif;
 }
@@ -122,6 +128,7 @@ html {
     border: 2px solid #540D0D;
     border-radius: 50px;
     text-decoration: none;
+    text-align: center;
     text-transform: uppercase;
     color: var(--color-white);
     font-weight: 700;
@@ -143,14 +150,89 @@ html {
     border-radius: 60px;
 }
 
+@media (max-width: 1024px) {
+
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .hero {
+        height: 50vh;
+    }
+
+    .aside-menu {
+        width: 70%;
+        height: 20vh;
+    }
+
+
+    .menu {
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .header {
+        padding: 0 1rem;
+    }
+
+    .header img {
+        width: 120px;
+    }
+
+    .header ul {
+        gap: 1.2rem;
+    }
+}
+
+@media (max-width: 650px) {
+
+    .menu {
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .aside-menu {
+        background-color: #461C1C;
+        border-radius: 60px;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    .header img {
+        width: 100px;
+        margin-bottom: 10px;
+    }
+
+    .header ul {
+
+        gap: 1rem;
+        align-items: center;
+    }
+}
 
 /* FIM MENU */
 
 /* COMEÇO APRESENTACAO */
-.container-apresentacao{
-width: 100%;
-display: flex;
-flex-direction: row;
+.container-apresentacao {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
 
 }
 
@@ -176,7 +258,8 @@ flex-direction: row;
     font-weight: 700;
     font-family: var(--font-sans);
 }
-.button{
+
+.button {
     padding: 1.25rem 2rem;
     width: 15%;
     background-color: var(--color-lightred);
@@ -200,9 +283,8 @@ flex-direction: row;
 }
 
 
-.aside-apresentacao{
-    height: calc(100vh + 15vh);
-    width: 50%;            
+.aside-apresentacao {
+    width: 50%;
     display: grid;
     grid-template-columns: repeat(2, minmax(auto, 1fr));
     grid-template-rows: repeat(3, minmax(auto, 1fr));
@@ -233,6 +315,7 @@ flex-direction: row;
 
 
 .container-arma {
+
     width: 100%;
     height: 660px;
     display: flex;

@@ -63,7 +63,7 @@ html {
 
 .header ul {
     display: flex;
-    font-size: clamp(1vmax, 2rem, 1.5vmin);
+    font-size: clamp(1rem, 1.2vw, 1.5rem);
     list-style: none;
     gap: 70px;
 }
@@ -120,7 +120,7 @@ html {
     text-align: center;
     width: 50%;
     color: var(--color-white);
-    font-size: clamp(1.2vmax, 1.2rem, 1vmin);
+    font-size: clamp(1rem, 1.2vw, 1.5rem);
     font-weight: 600;
     font-family: var(--font-sans);
 }
@@ -405,6 +405,7 @@ html {
 
 .column-right p {
     max-width: 90%;
+    font-size: clamp(1rem, 1.2vw, 1.5rem);
 }
 
 /* TABLET */
@@ -553,10 +554,9 @@ html {
 }
 
 .card-content p {
-    font-size: 0.9rem;
+    font-size: clamp(1rem, 1.2vw, 1.5rem);
     color: var(--color-darkred);
     font-family: var(--font-josefin);
-    font-weight: 400;
 }
 
 /* TABLET */
@@ -617,7 +617,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 6rem;
+    gap: 2rem;
 }
 
 
@@ -632,8 +632,7 @@ html {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 6rem;
-        margin-bottom: 2rem;
+        padding: 2rem;
     }
 }
 
@@ -653,7 +652,6 @@ html {
     justify-content: center;
     align-items: center;
     font-family: var(--font-sans);
-    font-weight: 700;
 }
 
 .membro img {
@@ -664,13 +662,13 @@ html {
 }
 
 .membro h3 {
-    padding-bottom: 1.3rem;
+    font-weight: 700;
+    padding-bottom: 1.2rem;
 }
 
 .membro p {
     padding-bottom: 0.8rem;
-    font-weight: 600;
-    font-size: 13px;
+    font-size: clamp(0.9rem, 0.9vw, 1.5rem);
     width: 70%;
 }
 

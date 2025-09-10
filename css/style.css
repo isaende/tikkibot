@@ -172,11 +172,11 @@ html {
     }
 
     .hero p {
-        color: var(--color-darkred);
+        color: var(--color-white);
     }
 
     .hero h2 {
-        color: var(--color-darkred);
+        color: var(--color-white);
     }
 
     .aside-menu {
@@ -239,7 +239,6 @@ html {
     }
 
     .hero {
-        background-image: url(../images/tikki01.jpg);
         width: 90%;
     }
 }
@@ -518,6 +517,7 @@ html {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     margin: 2rem;
+    padding: 1rem;
 }
 
 .container-hardware h2 {
@@ -532,6 +532,7 @@ html {
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.432);
     max-width: 22rem;
+    
 }
 
 .card-img {
@@ -642,7 +643,7 @@ html {
 .container-equipe {
     display: grid;
     grid-template-columns: repeat(4, minmax(auto, 1fr));
-    padding-bottom: 1rem;
+    margin: 1rem;
 }
 
 .membro {

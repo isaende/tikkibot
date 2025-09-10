@@ -690,9 +690,22 @@ html {
 }
 
 .icons a.socio {
+    padding: 1rem;
+    background-color: var(--color-lightred);
+    color: var(--color-white);
     font-size: 0.9rem;
     font-weight: 900;
     font-family: var(--font-sans);
+    border-radius: 2rem;
+    transition: .7s;
+}
+
+.icons a.socio:hover {
+    padding: 1rem;
+    background-color: transparent;
+    color: var(--color-white);
+    border: 2px solid var(--color-white);
+   
 }
 
 @media (max-width: 650px) {

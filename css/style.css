@@ -63,7 +63,7 @@ html {
 
 .header ul {
     display: flex;
-    font-size: clamp(1rem, 1.2vw, 1.5rem);
+    font-size: clamp(1vmax, 2rem, 1.5vmin);
     list-style: none;
     gap: 70px;
 }
@@ -405,7 +405,6 @@ html {
 
 .column-right p {
     max-width: 90%;
-    font-size: clamp(1rem, 1.2vw, 1.5rem);
 }
 
 /* TABLET */
@@ -524,7 +523,7 @@ html {
 .container-hardware h2 {
     font-family: var(--font-racing);
     color: var(--color-darkred);
-    font-size: clamp(4rem, 4rem, 2rem);
+    font-size: clamp(1rem, 1vw, 1.2rem);
 }
 
 .card-hardware {
@@ -557,6 +556,7 @@ html {
     font-size: clamp(1rem, 1.2vw, 1.5rem);
     color: var(--color-darkred);
     font-family: var(--font-josefin);
+    font-weight: 400;
 }
 
 /* TABLET */
@@ -662,8 +662,9 @@ html {
 }
 
 .membro h3 {
+    font-size: clamp(1.1rem, 2vw, 1.2rem);
     font-weight: 700;
-    padding-bottom: 1.2rem;
+    padding-bottom: 1rem;
 }
 
 .membro p {

@@ -63,7 +63,7 @@ html {
 
 .header ul {
     display: flex;
-    font-size: clamp(1vmax, 1rem, 1vmin);
+    font-size: clamp(1vmax, 2rem, 1.5vmin);
     list-style: none;
     gap: 70px;
 }
@@ -103,6 +103,7 @@ html {
     align-items: center;
     border-radius: 60px;
     gap: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.432);
 }
 
 .hero h2 {
@@ -125,9 +126,9 @@ html {
 }
 
 .button {
-    width: 30%;
+    min-width: 30%;
     font-family: var(--font-sans);
-    padding: 1.25rem 2rem;
+    padding: 1rem 2rem;
     margin: 20px;
     background-color: var(--color-lightred);
     border: 2px solid #540D0D;
@@ -154,6 +155,7 @@ html {
     background-position: center;
     margin: auto;
     border-radius: 60px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.432);
 }
 
 @media (max-width: 1024px) {
@@ -200,7 +202,7 @@ html {
     }
 
     .header ul {
-        gap: 1.2rem;
+        gap: 1.5rem;
     }
 }
 
@@ -244,40 +246,96 @@ html {
 
 /* FIM MENU */
 
-/* COMEÇO APRESENTACAO */
-
+/* ----------------------- APRESENTAÇÃO ----------------------*/
 .container-apresentacao {
-    width: 75%;
+    width: 85%;
+    min-height: 65vh;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
-    background-image: url(../images/tikki_apresentacao.png);
-    text-align: center;
+    background-image: url(../images/tikki-apresentacao.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
     border-radius: 3rem;
-    gap: 2rem;
     padding: 2rem;
     margin: 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.432);
+}
+
+.container-apresentacao .conteudo {
+    max-width: 45%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
 .container-apresentacao h2 {
     font-family: var(--font-racing);
     color: var(--color-white);
-    font-size: clamp(4rem, 4rem, 2rem);
+    font-size: clamp(2rem, 3vw, 4rem);
     text-transform: uppercase;
 }
 
-.container-apresentacao p{
-    width: 75%;
+.container-apresentacao p {
     text-indent: 3rem;
-    text-align:start;
     color: var(--color-white);
-    font-size: clamp(1.5vmax, 1.5rem, 1.2vmin);
+    font-size: clamp(1rem, 1.2vw, 1.5rem);
     font-weight: 500;
     font-family: var(--font-sans);
 }
 
-/* FIM APRESENTACAO */
+.container-apresentacao a{
+    min-width: 10%;
+    margin: 0 auto;
+}
+
+/* TABLET (até 1024px) */
+@media (max-width: 1024px) {
+    .container-apresentacao {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .container-apresentacao .conteudo {
+        max-width: 80%;
+        text-align: center;
+    }
+
+    .container-apresentacao p {
+        text-indent: 0;
+    }
+
+    .container-apresentacao a {
+        display: inline-block;    
+        margin: 0 auto;
+    }
+}
+
+/* CELULAR (até 768px) */
+@media (max-width: 768px) {
+    .container-apresentacao {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+
+    .container-apresentacao .conteudo {
+        max-width: 100%;
+    }
+
+    .container-apresentacao h2 {
+        font-size: clamp(1.8rem, 5vw, 2.5rem);
+    }
+
+    .container-apresentacao p {
+        font-size: clamp(1rem, 2.1vw, 1.2rem);
+    }
+
+    .container-apresentacao a {  
+        margin: 0 auto;
+    }
+}
 
 /* ----------------------- ARMA ----------------------*/
 .container-arma {
@@ -326,6 +384,7 @@ html {
     width: 100%;
     height: 70vh;
     object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.432);
 }
 
 .column-right {
@@ -342,6 +401,7 @@ html {
     width: 90%;
     height: 30vh;
     object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.432);
 }
 
 .column-right p {
@@ -435,9 +495,10 @@ html {
 
 .card img {
     width: 100%;
+    height: 250px;
     margin-bottom: 0.5rem;
     border-radius: 20px;
-    object-fit: contain;
+    object-fit: cover;
 }
 
 .card h2 {
@@ -451,8 +512,6 @@ html {
 
 
 /* ----------------------- HARDWARE ----------------------*/
-
-
 .container-hardware {
     font-family: "Julius Sans One", sans-serif;
     display: grid;
@@ -499,7 +558,6 @@ html {
     font-weight: 400;
 }
 
-/* ----------- MEDIAS ----------- */
 /* TABLET */
 @media (min-width: 650px) and (max-width: 1025px) {
     .container-hardware {
@@ -552,9 +610,9 @@ html {
 
 }
 
-/* VIDEOS */
-
-.videos{
+/* ----------------------- VÍDEOS ----------------------*/
+.videos {
+    padding-block: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -562,21 +620,20 @@ html {
 }
 
 
-.videos iframe{
+.videos iframe {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.432);
     border-radius: 3rem;
-    
 }
 
-@media(max-width: 650px){
-.videos{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 6rem;
-    margin-bottom: 2rem;
-}
+@media(max-width: 650px) {
+    .videos {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 6rem;
+        margin-bottom: 2rem;
+    }
 }
 
 /* FIM VIDEOS */
@@ -585,6 +642,7 @@ html {
 .container-equipe {
     display: grid;
     grid-template-columns: repeat(4, minmax(auto, 1fr));
+    padding-bottom: 1rem;
 }
 
 .membro {
@@ -691,10 +749,10 @@ html {
 }
 
 .icons a.socio {
-    padding: 1rem;
+    padding: 0.8rem;
     background-color: var(--color-lightred);
     color: var(--color-white);
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     font-weight: 900;
     font-family: var(--font-sans);
     border-radius: 2rem;
@@ -702,11 +760,10 @@ html {
 }
 
 .icons a.socio:hover {
-    padding: 1rem;
     background-color: transparent;
-    color: var(--color-white);
-    border: 2px solid var(--color-white);
-   
+    color: var(--color-lightred);
+    border: 2px solid var(--color-darkred);
+
 }
 
 @media (max-width: 650px) {

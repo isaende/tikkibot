@@ -285,7 +285,7 @@ html {
     font-family: var(--font-sans);
 }
 
-.container-apresentacao a{
+.container-apresentacao a {
     min-width: 10%;
     margin: 0 auto;
 }
@@ -307,7 +307,7 @@ html {
     }
 
     .container-apresentacao a {
-        display: inline-block;    
+        display: inline-block;
         margin: 0 auto;
     }
 }
@@ -331,7 +331,7 @@ html {
         font-size: clamp(1rem, 2.1vw, 1.2rem);
     }
 
-    .container-apresentacao a {  
+    .container-apresentacao a {
         margin: 0 auto;
     }
 }
@@ -532,7 +532,7 @@ html {
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.432);
     max-width: 22rem;
-    
+
 }
 
 .card-img {

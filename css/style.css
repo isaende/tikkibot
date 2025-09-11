@@ -671,6 +671,7 @@ html {
     padding-bottom: 0.8rem;
     font-size: clamp(0.9rem, 0.9vw, 1.5rem);
     width: 70%;
+    font-family: var(--font-josefin);
 }
 
 .membro a {
